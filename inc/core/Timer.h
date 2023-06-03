@@ -19,6 +19,7 @@ public:
   // check the status of the timer
   bool hasStarted();
   bool hasPaused();
+  bool isTicking();
 
 private:
   // the clock time when timer started

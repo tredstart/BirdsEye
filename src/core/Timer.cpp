@@ -19,6 +19,34 @@ void BE_Timer::start() {
   pausedTicks = 0;
 }
 
+void BE_Timer::stop() {
+  started = false;
+  paused = false;
+
+  startTicks = 0;
+  pausedTicks = 0;
+}
+
+void BE_Timer::pause() {
+  if (isTicking()) {
+    paused = true;
+
+    // we need to get the moment when timer has paused
+    pausedTicks = SDL_GetTicks() - startTicks;
+    startTicks = 0;
+  }
+}
+
+void BE_Timer::unpause() {
+  if (hasPaused()) {
+    paused = false;
+
+    // set new startTicks
+    startTicks = SDL_GetTicks() - pausedTicks;
+    pausedTicks = 0;
+  }
+}
+
 Uint32 BE_Timer::getTicks() {
   // the actual timer time
   Uint32 time = 0;
@@ -39,5 +67,5 @@ Uint32 BE_Timer::getTicks() {
 }
 
 bool BE_Timer::hasPaused() { return paused && started; }
-
+bool BE_Timer::isTicking() { return started && !paused; }
 bool BE_Timer::hasStarted() { return started; }
