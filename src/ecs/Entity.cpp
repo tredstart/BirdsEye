@@ -1,6 +1,6 @@
 
 #include "Entity.h"
-#include "Component.h"
+#include "IComponent.h"
 #include <stdexcept>
 #include <string>
 #include <unordered_map>

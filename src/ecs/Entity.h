@@ -1,7 +1,7 @@
 #ifndef ENTITY_H
 #define ENTITY_H
 
-#include "Component.h"
+#include "IComponent.h"
 #include <string>
 #include <unordered_map>
 class Entity {
