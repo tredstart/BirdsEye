@@ -1,14 +1,12 @@
-cmake_minimum_required(VERSION 3.26.0)
+
 
 add_library(ecs)
 
-target_sources( 
+target_sources(ecs
     PRIVATE 
     ${CMAKE_CURRENT_LIST_DIR}/Entity.cpp
     PUBLIC
     ${CMAKE_CURRENT_LIST_DIR}/Entity.h
-    PRIVATE
-    ${CMAKE_CURRENT_LIST_DIR}/Components.cpp
     PUBLIC
     ${CMAKE_CURRENT_LIST_DIR}/Component.h
   )

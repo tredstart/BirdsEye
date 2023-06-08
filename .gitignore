@@ -1,4 +1,5 @@
 obj/
 BirdsEye
 build/
-
+.idea
+cmake-build-release/
