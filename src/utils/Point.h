@@ -8,9 +8,9 @@
 template<typename T>
 struct Point {
 public:
-    T x;
-    T y;
+  T x;
+  T y;
 };
 
 
-#endif //BIRDSEYE_POINT_H
+#endif// BIRDSEYE_POINT_H

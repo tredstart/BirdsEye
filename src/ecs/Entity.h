@@ -8,7 +8,7 @@ class Entity {
 public:
   Entity() = default;
   ~Entity() = default;
-  IComponent *getComponent(const std::string& name);
+  IComponent *getComponent(const std::string &name);
   void addComponent(IComponent *component);
   bool removeComponent(IComponent *component);
 

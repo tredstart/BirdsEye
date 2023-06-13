@@ -8,11 +8,11 @@
 set(CMAKE_CXX_STANDARD 17)
 
 add_library(BaseComponents)
-target_sources( BaseComponents
+target_sources(BaseComponents
         PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}/TransformComponent.cpp
         PUBLIC
         ${CMAKE_CURRENT_LIST_DIR}/TransformComponent.h
-)
+        )
 
 target_include_directories(BaseComponents PUBLIC ${CMAKE_CURRENT_LIST_DIR})

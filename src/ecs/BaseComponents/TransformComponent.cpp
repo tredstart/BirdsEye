@@ -3,11 +3,9 @@
 //
 #include "TransformComponent.h"
 
-TransformComponent::TransformComponent(float x, float y, float rotationDeg, float scale) {
-    this->position = {.x=x, .y=y};
-    this->rotationDeg = rotationDeg;
-    this->scale = scale;
+TransformComponent::TransformComponent(float x, float y, float rotationDeg,
+                                       float scale) {
+  this->position = {.x = x, .y = y};
+  this->rotationDeg = rotationDeg;
+  this->scale = scale;
 }
-
-
-

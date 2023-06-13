@@ -6,24 +6,23 @@
 #define BIRDSEYE_MOVESYSTEM_H
 
 
-#include <vector>
+#include "../BaseComponents/TransformComponent.h"
 #include "../Entity.h"
 #include "../ISystem.h"
-#include "../BaseComponents/TransformComponent.h"
+#include <vector>
 
 struct MoveNode {
-    TransformComponent *transformComponent;
+  TransformComponent *transformComponent;
 };
 
 class MoveSystem : public ISystem {
 private:
-    std::vector<MoveNode*> nodes;
+  std::vector<MoveNode *> nodes;
+
 public:
-    void addNode(MoveNode *node);
-    void update(float dt) const override;
+  void addNode(MoveNode *node);
+  void update(float dt) const override;
 };
 
 
-
-
-#endif //BIRDSEYE_MOVESYSTEM_H
+#endif// BIRDSEYE_MOVESYSTEM_H

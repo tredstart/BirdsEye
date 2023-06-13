@@ -5,15 +5,13 @@
 #include <string>
 #include <unordered_map>
 
-IComponent *Entity::getComponent(const std::string& name) {
+IComponent *Entity::getComponent(const std::string &name) {
   if (components.empty()) {
     throw std::length_error("Components map is empty. Can't read values");
   } else {
     try {
       return components.at(name);
-    } catch (std::out_of_range) {
-      return nullptr;
-    }
+    } catch (std::out_of_range) { return nullptr; }
   }
 }
 

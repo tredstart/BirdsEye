@@ -8,11 +8,11 @@
 set(CMAKE_CXX_STANDARD 17)
 
 add_library(BaseSystems)
-target_sources( BaseSystems
+target_sources(BaseSystems
         PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}/MoveSystem.cpp
         PUBLIC
         ${CMAKE_CURRENT_LIST_DIR}/MoveSystem.h
-)
+        )
 
 target_include_directories(BaseComponents PUBLIC ${CMAKE_CURRENT_LIST_DIR})

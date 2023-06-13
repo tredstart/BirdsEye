@@ -7,8 +7,9 @@
 
 
 class ISystem {
-    virtual void update(float dt) const = 0;
+public:
+  virtual void update(float dt) const = 0;
 };
 
 
-#endif //BIRDSEYE_ISYSTEM_H
+#endif// BIRDSEYE_ISYSTEM_H
